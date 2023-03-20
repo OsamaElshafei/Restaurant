@@ -1,5 +1,6 @@
 package com.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class Order extends categoryorder{
     private String description;
     @ManyToOne
     @JoinColumn(name = "id_category")
-private Category category;
+    @JsonIgnore
+    private Category category;
 
 }
